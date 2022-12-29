@@ -75,7 +75,7 @@ nav {
     .nav-links {
         position: fixed;
         right: 0px;
-        height: 92vh;
+        height: 50vh;
         top: 8vh;
         display: flex;
         flex-direction: column;
@@ -84,7 +84,6 @@ nav {
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
         background-color: #423e37;
-        padding: 1rem 0 4rem;
     }
     .nav-links a {
         color: #EDEBD7;
@@ -156,7 +155,7 @@ nav {
 
 
 .home {
-    margin: 3rem 1rem;
+    margin: 3rem 1rem 5rem;
     text-align: center;
 }
 .home img {
