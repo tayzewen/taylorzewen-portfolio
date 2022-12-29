@@ -1,0 +1,505 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #EDEBD7;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    color: #191715;
+}
+
+.logo {
+    color:#EDEBD7;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #423e37;
+    color: #edebd7;
+}
+
+.nav-links {
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.active {
+    color: #C75146 !important;
+    font-style: italic;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: #EDEBD7;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .4rem;
+}
+
+.nav-links a:hover {
+    color: #C75146;
+    font-style: italic;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 20px;
+    height: 3px;
+    margin: 5px;
+    background-color:#EDEBD7;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        position: fixed;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        background-color: #423e37;
+        padding: 1rem 0 4rem;
+    }
+    .nav-links a {
+        color: #EDEBD7;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+    }
+}
+
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+    background-color: #C75146;
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+    background-color: #C75146;
+}
+
+@keyframes right_to_left {
+    from {
+      margin-left: 100%;
+    }
+    to {
+      margin-left: 0;
+    }
+  }
+  
+  @keyframes left_to_right {
+    from {
+      margin-left: -100%;
+    }
+    to {
+      margin-left: 0;
+    }
+  }
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.home {
+    margin: 3rem 1rem;
+    text-align: center;
+}
+.home img {
+    margin: 5px 0 10px;
+    width: 65%;
+    height: auto;
+}
+
+.name {
+    text-transform: uppercase;
+    margin: 25px 5px 10px;
+    text-shadow: 3px 4px 6px #898682;
+}
+
+.name>*:first-child {
+    font-size: 4.063rem;
+    font-weight: 600;
+    line-height: 55px;
+    letter-spacing: -3px;
+    animation: right_to_left 1s ease;
+}
+
+.name>*:nth-child(2) {
+    font-size: 2.813rem;
+    letter-spacing: 1.1rem;
+    padding-left: 1.813rem;
+    font-weight: 700;
+    line-height: 40px;
+    animation: left_to_right 1s ease;
+}
+
+.name>*:last-child {
+    font-size: 1.7rem;
+    letter-spacing: .69rem;
+    padding-left: 1.2rem;
+    font-weight: 700;
+    line-height: 25px;
+    animation: fade-in 1s;
+}
+
+.skills {
+    font-size: 28px;
+    font-weight: 600;
+    padding-left: 20px;
+    line-height: 25px;
+}
+.container-home {
+    display: inline-block;
+    text-align: left;
+}
+
+.img-content {
+    animation: fade-in 2s;
+    margin-top: 1.5rem;
+}
+
+#small-txt {
+    font-size: 20px;
+    line-height: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    padding-top: .5rem;
+
+}
+
+.heading >*:first-child {
+    font-size: 3.5rem;
+    line-height: 3rem;
+}
+
+.heading >*:nth-child(2) {
+    font-size: 2.5rem;
+    letter-spacing: .5rem;
+    font-weight: 700;
+    line-height: 2rem;
+    padding-left: .8rem;
+    animation: left_to_right 1s ease;
+}
+
+@font-face {
+    font-family: Oswald;
+    src: url(assets/Oswald-VariableFont_wght.ttf);
+}
+
+.about-content {
+    font-family: Oswald;
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+    padding: .5rem 0 2rem;
+}
+
+.contact-content {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 2rem;
+    margin: 2rem 0 1rem;
+    display: inline-block;
+    text-align: left;
+    font-size: 1.2rem;
+    background-color: #423e37;
+    border-radius: 2vh;
+    box-shadow: 5px 5px 8px #898682;
+}
+
+.social-content a {
+    text-decoration: none;
+    color: #EDEBD7;
+}
+
+.social-content a:hover {
+    color: #E3B23C;
+}
+
+.social-content i {
+    text-decoration: none;
+    color:#AEFFD8;
+}
+
+.contact-message {
+    font-family: Oswald;
+    font-size: 1.7rem;
+    padding: 2.5rem 2rem 2rem;
+}
+
+.title-icons a {
+    color: #EDEBD7;
+    text-decoration: none;
+    margin: .7rem 2rem 1rem;
+    transition: 0.3s;
+}
+
+.title-icons a:hover {
+    color: #E3B23C;
+}
+
+#imp {
+    font-weight: bold;
+}
+
+footer {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+    text-align: center;
+    background-color: #423e37;
+    color: #EDEBD7;
+    padding: .5rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+ 
+}
+
+
+
+
+@media screen and (min-width: 1296px) {
+    .nav-links {
+        transform: none;
+    }
+    
+    .home {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 75vh;
+    }
+    .home img {
+        height: auto;
+        width: 50%;
+        padding: 3rem;
+    }
+    .img-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .name {
+        padding: 2rem;
+    }
+    
+    .name>*:first-child {
+        font-size: 6.25rem;
+        line-height: 90px;
+        padding-right: 15px;
+    }
+    
+    .name>*:nth-child(2) {
+        font-size: 4.688rem;
+        line-height: 50px;
+        letter-spacing: 22px;
+        padding-left: 25px;
+    }
+    
+    .name>*:last-child {
+        font-size: 2rem;
+        line-height: 2.8rem;
+        letter-spacing: 1.3rem;
+        padding-right: 10px;
+    }
+
+    .skills {
+        font-size: 2.813rem;
+        line-height: 2rem;
+    }
+
+    #small-txt {
+        font-size: 2.375rem;
+        line-height: 1.8rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 1.725rem;
+        padding-top: 2rem;
+    }
+
+    .heading >*:first-child {
+        font-size: 6.25rem;
+        line-height: 5rem;
+        padding-left: 1rem;
+    }
+    
+    .heading >*:nth-child(2) {
+        font-size: 4.688rem;
+        letter-spacing: .5rem;
+        line-height: 4.2rem;
+    }
+
+    #made {
+        letter-spacing: 1rem;
+    }
+
+    .about {
+        height: 82vh;
+    }
+
+    .about-content {
+        font-size: 1.9rem;
+        line-height: 2rem;
+        width: 20.045rem;
+    }
+
+    .title-icons a {
+        margin: 1rem 5rem 2rem;
+    }
+
+    .contact {
+        height: 72vh;
+    }
+
+    .contact-message {
+        font-size: 2rem;
+    }
+
+    .contact-content {
+        margin: 0 4rem;
+    }
+
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1295px) {
+    
+    .home {
+        margin: 4rem 2rem;
+    }
+    .home, .img-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-content {
+        justify-content: space-around;
+    }
+
+    .home img {
+        height: auto;
+        width: 45%;
+        padding: 1rem;
+    }
+
+    .name>*:first-child {
+        font-size: 4rem;
+        line-height: 50px;
+        padding-right: 5px;
+    }
+    
+    .name>*:nth-child(2) {
+        font-size: 2.613rem;
+        line-height: 30px;
+        letter-spacing: 1.2rem;
+        padding-left: 25px;
+    }
+    
+    .name>*:last-child {
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+        letter-spacing: .9rem;
+    }
+
+    .skills {
+        font-size: 2.1rem;
+        line-height: 1.6rem;
+    }
+
+    #small-txt {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 1.55rem;
+    }
+
+    .heading >*:nth-child(2) {
+        font-size: 2.613rem;
+        letter-spacing: .5rem;
+        line-height: 2.4rem;
+        padding-left: 0;
+    }
+
+    .projects >*:nth-child(2){
+        letter-spacing: .8rem;
+        padding-left: .5rem;
+    }
+
+    .about {
+        height: 62vh;
+    }
+
+    .about-content {
+        width: 14.278rem;
+    }
+    .heading {
+        padding: 2rem;
+    }
+
+    .contact {
+        height: 50vh;
+    }
+
+   
+}
+
+
+
