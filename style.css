@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body, html {
+    height: 100%;
+}
+
 body {
     background-color: #EDEBD7;
     font-family: Arial, Helvetica, sans-serif;
@@ -295,6 +299,22 @@ nav {
     font-weight: bold;
 }
 
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.row img {
+    border-radius: 6vh;
+}
+
+.column {
+    flex: 100%;
+    max-width: 100%;
+}
+
 footer {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.1rem;
@@ -414,8 +434,23 @@ footer {
         margin: 0 4rem;
     }
 
+    .row img {
+        border-radius: 6vh;
+    }
+   
+    .column {
+        flex: 33%;
+        max-width: 33%;
+    }
+
+    .column img {
+        vertical-align: middle;
+        width: 100%;
+        padding: 1rem;
+    }
+
     footer {
-        position:absolute;
+        position:fixed;
         width:100%;
         height:6rem;
     }
@@ -423,7 +458,7 @@ footer {
 
 }
 
-@media screen and (min-width: 769px) and (max-width: 1295px) {
+@media screen and (min-width: 821px) and (max-width: 1295px) {
     
     .home {
         margin: 4rem 2rem;
@@ -504,8 +539,16 @@ footer {
         height: 62vh;
     }
 
+    .row {
+        flex-wrap: wrap;
+        min-width: 50%;
+        max-height: 100%;
+        margin-bottom: auto;
+        margin-top: auto;
+    }
+
     footer {
-        position:absolute;
+        position:fixed;
         width:100%;
         height:6rem;
     }
