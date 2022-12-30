@@ -308,6 +308,7 @@ nav {
 
 .row img {
     border-radius: 6vh;
+    animation: fade-in 2s;
 }
 
 .column {
