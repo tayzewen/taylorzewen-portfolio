@@ -28,6 +28,7 @@ nav {
     min-height: 8vh;
     background-color: #423e37;
     color: #edebd7;
+    box-shadow: 0px 3px 10px #716E69;
 }
 
 .nav-links {
@@ -325,6 +326,7 @@ footer {
     padding: .5rem 0;
     bottom:0;
     width:100%;
+    box-shadow: 3px 0px 10px #716E69;
     /* position: fixed; */
  
 }
