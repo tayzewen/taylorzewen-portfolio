@@ -159,14 +159,18 @@ nav {
 }
 
 
-.home {
+.home, .about {
     margin: 2rem 1rem 3rem;
     text-align: center;
 }
 .home img {
     margin: 5px 0 10px;
-    width: 65%;
+    width: 100%;
     height: auto;
+}
+
+#contactMsg {
+    padding-bottom: 2rem;
 }
 
 .name {
@@ -215,6 +219,9 @@ nav {
 .img-content {
     animation: fade-in 2s;
     margin-top: 1.5rem;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #small-txt {
@@ -223,8 +230,8 @@ nav {
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 20px;
-    padding-top: .5rem;
-
+    padding: .5rem 0 0 1.2rem;
+    text-align: center;
 }
 
 .heading >*:first-child {
@@ -246,11 +253,18 @@ nav {
     src: url(assets/Oswald-VariableFont_wght.ttf);
 }
 
+
+.about img {
+    height: auto;
+    width: 100%;
+    /* padding: 3rem; */
+}
+
 .about-content {
     font-family: Oswald;
     font-size: 1.2rem;
     line-height: 1.3rem;
-    padding: .5rem 0 2rem;
+    padding: 1rem 0 2rem;
 }
 
 .contact-content {
@@ -342,20 +356,21 @@ footer {
     .home {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
         margin-top: auto;
         margin-bottom: auto;
         height: 75vh;
+        padding: 0 2rem;
     }
     .home img {
         height: auto;
-        width: 50%;
-        padding: 3rem;
+        width: 100%;
+        /* padding: 3rem; */
     }
     .img-content {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
+        text-align: center;
+        width: 25%;
+        margin: 0;
     }
     .name {
         padding: 2rem;
@@ -382,17 +397,19 @@ footer {
     }
 
     .skills {
-        font-size: 2.813rem;
+        font-size: 2.513rem;
         line-height: 2rem;
+        padding-left: 0;
+        width: 29.364rem;
     }
 
     #small-txt {
-        font-size: 2.375rem;
+        font-size: 2.175rem;
         line-height: 1.8rem;
         font-weight: 400;
         text-transform: uppercase;
         letter-spacing: 1.725rem;
-        padding-top: 2rem;
+        padding: 2rem 0 0 1.5rem;
     }
 
     .heading >*:first-child {
@@ -412,13 +429,19 @@ footer {
     }
 
     .about {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: auto;
+        margin-bottom: auto;
         height: 75vh;
+        padding: 0 2rem;
     }
 
     .about-content {
         font-size: 1.9rem;
         line-height: 2rem;
-        width: 20.045rem;
+        width: 27.68rem;
     }
 
     .title-icons a {
@@ -431,6 +454,7 @@ footer {
 
     .contact-message {
         font-size: 2rem;
+        width: 25.648rem;
     }
 
     .contact-content {
@@ -467,19 +491,20 @@ footer {
         margin: 4rem 2rem;
         height: 62vh;
     }
-    .home, .img-content {
+    .home, .img-content, .about {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
     .img-content {
-        justify-content: space-around;
+        justify-content: center;
+        width: 40%;
     }
 
     .home img {
         height: auto;
-        width: 45%;
+        width: 100%;
         padding: 1rem;
     }
 
@@ -503,8 +528,9 @@ footer {
     }
 
     .skills {
-        font-size: 2.1rem;
+        font-size: 1.9rem;
         line-height: 1.6rem;
+        padding-left: 0;
     }
 
     #small-txt {
@@ -512,7 +538,7 @@ footer {
         line-height: 1.8rem;
         font-weight: 400;
         text-transform: uppercase;
-        letter-spacing: 1.55rem;
+        letter-spacing: 1rem;
     }
 
     .heading >*:nth-child(2) {
@@ -533,6 +559,7 @@ footer {
 
     .about-content {
         width: 14.278rem;
+        
     }
     .heading {
         padding: 2rem;
